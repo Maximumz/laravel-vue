@@ -2,9 +2,20 @@
 <p>You are able to register, login update profile details & add products after registering</p>
 <p>You can add products to cart & remove from cart which is saved against the session</p>
 
-## Next Steps
+## The Demo site can be accessed here: https://laravel.mp-ltd.com/
+<p>Otherwise clone the repo:</p>
+
+`cd laravel-vue`
+`run composer install`
+`npm install`
+`php artisan migrate`
+
+Then update the .env settings
+
+## Next steps to be done:
 
 - Add custom validation error messages
+- Add loaders to buttons
 - Add user types - Admin, Guest & Customer
 - Add paginate products
 - Add categories
