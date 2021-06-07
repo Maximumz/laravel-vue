@@ -1,3 +1,18 @@
+## Welcome, this is a demo repo built with Laravel + Vue E-Commerce web app.
+<p>You are able to register, login update profile details & add products after registering</p>
+<p>You can add products to cart & remove from cart which is saved against the session</p>
+
+## Next Steps
+
+- Add custom validation error messages
+- Add user types - Admin, Guest & Customer
+- Add paginate products
+- Add categories
+- Add orders - init, status, failed, incomplete, complete
+- Add checkout - init, abort
+- Add billing/shipping address
+- Add payment - failed, successs
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
