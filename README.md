@@ -20,6 +20,8 @@ Then update the .env settings & run:
 - Add custom validation error messages
 - Add loaders to buttons
 - Add user types - Admin, Guest & Customer
+- Add update & delete products from the backend
+- Add product feature page
 - Add paginate products
 - Add categories
 - Add orders - init, status, failed, incomplete, complete
