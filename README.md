@@ -6,11 +6,13 @@
 <p>Otherwise clone the repo:</p>
 
 `cd laravel-vue`
+
 `run composer install`
+
 `npm install`
-`php artisan migrate`
 
 Then update the .env settings
+`php artisan migrate`
 
 ## Next steps to be done:
 
