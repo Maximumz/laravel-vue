@@ -11,7 +11,7 @@
 
 `npm install`
 
-Then update the .env settings then run:
+Then update the .env settings & run:
 
 `php artisan migrate`
 
