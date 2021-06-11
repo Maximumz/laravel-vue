@@ -11,7 +11,7 @@
 
 `npm install`
 
-Then update the .env settings & run:
+Then update the .env settings (MYSQL 5.7+) & run:
 
 `php artisan migrate`
 

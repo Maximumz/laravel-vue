@@ -103,7 +103,7 @@ class Cart extends Model
             $cartTotal = $cartTotal + ($item["price"] * $item["quantity"]);
           }
         }
-        
+
         $cart["total"] = round($cartTotal, 2);
 
         return $this->updateCart($cart);

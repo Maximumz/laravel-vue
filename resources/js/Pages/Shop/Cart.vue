@@ -1,6 +1,6 @@
 <template>
 	<MainMenu />
-	<div v-if="cart" class="flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 bg-coolGray-50 text-coolGray-800">
+	<div v-if="cart.total > 0" class="flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 bg-coolGray-50 text-coolGray-800">
 		<h2 class="text-xl font-semibold">Your cart</h2>
 		<ul class="flex flex-col divide-y divide-coolGray-300">
 			<li v-for="(product, index) in cart" class="flex flex-col py-6 sm:flex-row sm:justify-between">
