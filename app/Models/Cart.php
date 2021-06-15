@@ -74,12 +74,7 @@ class Cart extends Model
           ];
         }
 
-        $cartTotal = 0;
-        foreach ($cart as $item) {
-          $cartTotal = $cartTotal + ($item["price"] * $item["quantity"]);
-        }
-
-        $cart["total"] = round($cartTotal, 2);
+        $cart = $this->updateCartTotals($cart);
 
         return $this->updateCart($cart);
     }
@@ -97,18 +92,37 @@ class Cart extends Model
           unset($cart[$product->id]);
         }
 
-        $cartTotal = 0;
-        if (!empty($cart)) {
-          foreach ($cart as $item) {
-            $cartTotal = $cartTotal + ($item["price"] * $item["quantity"]);
-          }
-        }
-
-        $cart["total"] = round($cartTotal, 2);
+        $cart = $this->updateCartTotals($cart);
 
         return $this->updateCart($cart);
     }
 
+    /**
+     * Update the cart totals
+     */
+    private function updateCartTotals($cart) {
+
+        if (!empty($cart["total"])) {
+            unset($cart["total"]);
+        }
+
+        $cartTotal = 0;
+        if (!empty($cart)) {
+            foreach ($cart as $item) {
+                if (!empty($item["price"]) && !empty($item["quantity"])) {
+                    $cartTotal = $cartTotal + ($item["price"] * $item["quantity"]);
+                }
+            }
+        }
+
+        $cart["total"] = round($cartTotal, 2);
+
+        return $cart;
+    }
+
+    /**
+     * Update the cart within the session & store
+     */
     private function updateCart($cart)
     {
       session(['cart' => $cart]);
