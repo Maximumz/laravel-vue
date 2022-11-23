@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full p-3 sm:p-3 bg-red-600">
+  <div class="flex flex-col w-full p-3 sm:p-3" style="background-color:  #a437db;">
     <h2 class="text-xl font-semibold text-white">FREE SHIPPING - <span class="text-sm">(ON ITEMS OVER $40)</span></h2>
   </div>
   <div v-if="products" class="container" ref="shop">
